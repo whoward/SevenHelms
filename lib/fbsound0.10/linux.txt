@@ -1,0 +1,9 @@
+on slackware, slax and vector linux all libs are installed
+
+but on ubunto you need:
+
+sudo apt-get install libOGG-dev
+sudo apt-get install libvorbis-dev
+sudo apt-get install libasound-dev
+
+Joshy

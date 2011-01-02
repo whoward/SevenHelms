@@ -10,6 +10,8 @@
 '900-1999 ?
 '2000+ BATTLE
 
+#Lang "qb"
+
 '$DYNAMIC
 '$INCLUDE: 'DS4QB2.BI'
 
@@ -367,7 +369,6 @@ DIM SHARED FamiliarFlute%
 DIM SHARED GateKey%
 
 'INITIALIZING Sound
-
 CLS : PRINT "Loading...Please Wait"
 	InitDS4QB
 OPEN "DS4QB2.DAT" FOR OUTPUT AS #1
@@ -8810,7 +8811,7 @@ EndGame
 END SUB
 
 REM $DYNAMIC
-FUNCTION ENEMYHPSBONUS
+FUNCTION ENEMYHPSBONUS%
 IF Lvl% >= 1 THEN
 ENEMYHPSBONUS = 0
 END IF
@@ -10912,7 +10913,7 @@ PRINT ""
 PRINT "                         Press Spacebar To Continue"
 DO
 LOOP UNTIL INKEY$ = CHR$(32)    '32 is the ASCII code for Spacebar.
-SetVolume WillsSoundEffectVolume, WillsSoundEffectVolume, WillsMusicVolume
+SetVolume WillsSoundEffectVolume%, WillsSoundEffectVolume%, WillsMusicVolume%
 RemoveMusic 3
 ResumeMusic 1
 CLS
@@ -12883,7 +12884,7 @@ COLOR 15
 	PauseMusic 1
 	LoadMusic "MAIN.MP3", 2, 2, 1, 1
 	PauseMusic 2
-	SetVolume WillsSoundEffectVolume, WillsSoundEffectVolume, WillsMusicVolume
+	SetVolume WillsSoundEffectVolume%, WillsSoundEffectVolume%, WillsMusicVolume%
 	ResumeMusic 1
 	IF Sex$ = "his" THEN SexType$ = "boy"
 	IF Sex$ = "her" THEN SexType$ = "girl"

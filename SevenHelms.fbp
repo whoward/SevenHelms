@@ -13,8 +13,8 @@ RunCmd=0
 Module=Module Build,fbc -c
 Recompile=0
 Current=1
-1=QBasic Console,fbc -lang qb -s console src/MUD2.BAS
-Output=
+1=QBasic Console,fbc -s console src/MUD2.BAS
+Output=SevenHelms.exe
 Run=
 Delete=
 [TabOrder]
@@ -23,9 +23,14 @@ TabOrder=
 1=src\Ds4qb2.bas
 2=src\Ds4qb2.bi
 3=src\MUD2.BAS
+4=
 [BreakPoint]
 3=
 1=
+4=
+2=
 [FileInfo]
 1=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3=0,13048,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4=0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
