@@ -1,8 +1,5 @@
-# Don't add the ds4qb2 communication file
-src/DS4QB2.DAT
-
 # Don't add new executables
-src/*.exe
+*.exe
 
-# DO not include FbEdit backup directory
+# Do not include FbEdit backup directory
 Bak/*
