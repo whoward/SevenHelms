@@ -1,0 +1,31 @@
+[Project]
+Version=3
+Api=fb (FreeBASIC),fmod (fmod Sound)
+Description=Seven Helms
+Grouping=1
+AddMainFiles=1
+AddModuleFiles=1
+ResExport=
+CompileIfNewer=0
+IncVersion=0
+RunCmd=0
+[Make]
+Module=Module Build,fbc -c
+Recompile=0
+Current=1
+1=QBasic Console,fbc -lang qb -s console src/MUD2.BAS
+Output=
+Run=
+Delete=
+[TabOrder]
+TabOrder=
+[File]
+1=src\Ds4qb2.bas
+2=src\Ds4qb2.bi
+3=src\MUD2.BAS
+[BreakPoint]
+3=
+1=
+[FileInfo]
+1=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3=0,13048,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
