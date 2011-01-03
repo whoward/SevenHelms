@@ -6,3 +6,6 @@ DS4QB2.DAT
 
 # Do not include FbEdit backup directory
 Bak/*
+
+# Don't include the undo file for the project
+*.undo

@@ -8,7 +8,7 @@ DECLARE SUB LoadMusic (ByVal MusicName AS STRING, ByVal MusicType AS INTEGER, By
 DECLARE SUB LoadSample ()
 DECLARE FUNCTION LongBreak (LongVar AS LONG, IntNum AS INTEGER) As Integer
 DECLARE FUNCTION LongMake (IntVar1 AS INTEGER, IntVar2 AS INTEGER) As Long
-DECLARE SUB PlaySample (SFXT As Integer)
+DECLARE SUB PlaySample (ByVal SampleName As String)
 DECLARE Sub RemoveMusic (ByVal Channel AS INTEGER)
 DECLARE SUB Set3D (MusicChannel AS INTEGER, PX AS SINGLE, PY AS SINGLE, PZ AS SINGLE, VX AS SINGLE, VY AS SINGLE, VZ AS SINGLE)
 DECLARE SUB SetChannel (MusicChannel AS INTEGER, Frequency AS LONG, Volume AS INTEGER, Panning AS INTEGER)
@@ -17,6 +17,6 @@ DECLARE SUB SetPos (MusicChannel AS INTEGER, MP3Position AS LONG, MODOrder AS IN
 DECLARE SUB SetVolume (MODVol As Integer, SAMVol As Integer, MP3Vol As Integer)
 DECLARE SUB ShutdownDS4QB ()
 DECLARE SUB WaitforDMA0 ()
-DECLARE SUB PauseMusic (MusicChannel AS INTEGER)
-DECLARE SUB ResumeMusic (MusicChannel AS INTEGER)
+DECLARE SUB PauseMusic (ByVal MusicChannel As Integer)
+DECLARE SUB ResumeMusic (ByVal MusicChannel As Integer)
 

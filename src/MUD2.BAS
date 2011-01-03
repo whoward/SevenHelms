@@ -371,12 +371,6 @@ DIM SHARED GateKey%
 'INITIALIZING Sound
 CLS : PRINT "Loading...Please Wait"
 	InitDS4QB
-OPEN "DS4QB2.DAT" FOR OUTPUT AS #1
-PRINT #1, "orcspeak.wav"
-PRINT #1, "undeadspeak.wav"
-PRINT #1, "zombiespeak.wav"
-CLOSE #1
-	LoadSample
 	RemoveMusic 1
 	WillsSoundEffectVolume% = 50
 	WillsMusicVolume% = 75
@@ -6639,14 +6633,14 @@ IF HelmsburgBttl% = 1 THEN
 	M% = 100
 	PRINT "BATTLE: Type help for battle commands"
 	ENEMY$ = "Ork"
-	PlaySample 1
+	PlaySample "orcspeak.wav"
 	END IF
 
-IF HelmsburgBttl% = 2 THEN
+If HelmsburgBttl% = 2 THEN
 	M% = 100
 	PRINT "BATTLE: Type help for battle commands"
 	ENEMY$ = "Ork"
-	PlaySample 1
+	PlaySample "orcspeak.wav"
 	END IF
 
 IF A3Corpse% = 1 THEN
@@ -6656,8 +6650,8 @@ IF A3Corpse% = 1 THEN
 	PRINT "The lunge damages you"
 	HPS% = HPS% - 2
 	ENEMY$ = "Corpse"
-	PlaySample 2
-	END IF
+	PlaySample "undeadspeak.wav"
+END IF
 
 0.2 RANDOMIZE TIMER                        'RANDOMIZING THE MONSTER HITPOINTS
 P% = INT(RND * 6) + 1                      'RANDOMIZING THE MONSTER HITPOINTS
@@ -6666,7 +6660,7 @@ ENEMYPTS% = P% + q% + ENEMYHPSBONUS        'RANDOMIZING THE MONSTER HITPOINTS (I
 
 IF WightLord% = 1 THEN
 	ENEMY$ = "Wight Lord"
-	PlaySample 2
+	PlaySample "undeadspeak.wav"
 	ENEMYPTS% = 2000
 	END IF
 PRINT "The "; ENEMY$; " spits at "; Name$; " and readies his weapon."
@@ -10871,10 +10865,6 @@ SUB GameIntro
 Quest% = 1
 A12Potions% = 3
 SetVolume 0, 0, 0
-LoadMusic "INTRO.MP3", 2, 1, 0, 1
-PauseMusic 1
-LoadMusic "MAIN.MP3", 2, 2, 1, 1
-PauseMusic 2
 Name$ = "young warrior"
 Class$ = "Fighter"
 Fighter% = 1
@@ -10915,8 +10905,8 @@ DO
 LOOP UNTIL INKEY$ = CHR$(32)    '32 is the ASCII code for Spacebar.
 SetVolume WillsSoundEffectVolume%, WillsSoundEffectVolume%, WillsMusicVolume%
 RemoveMusic 3
-ResumeMusic 1
-CLS
+LoadMusic "INTRO.MP3", 2, 1, 0, 1
+Cls
 PRINT "   You wake from your sleep this morning to the sounds of the town's"
 PRINT "soldiers training for battle, once again you are reminded of your desire"
 PRINT "to become a great warrior.";
@@ -10933,7 +10923,7 @@ PRINT "the townspeople!  You look around desperately and see your father's sword
 PRINT "mounted on the wall.  Quickly you grab the weapon and fly into battle."
 SLEEP 23
 RemoveMusic 1
-ResumeMusic 2
+LoadMusic "MAIN.MP3", 2, 2, 1, 1
 HelmsburgBttl% = 1
 BATTLE
 HelmsburgBttl% = 2
@@ -13016,9 +13006,10 @@ INPUT ">", Sound$
 	IF Sound$ = "e" THEN
 		PRINT "Which one do you want to play? <1-3>"
 		INPUT ">", SFXTest$
-		IF SFXTest$ = "1" THEN PlaySample 1
-		IF SFXTest$ = "2" THEN PlaySample 2
-		IF SFXTest$ = "3" THEN PlaySample 3
+		IF SFXTest$ = "1" THEN PlaySample "orcspeak.wav"
+		IF SFXTest$ = "2" THEN PlaySample "undeadspeak.wav"
+		IF SFXTest$ = "3" THEN PlaySample "zombiespeak.wav"
+
 		GOTO 1.3
 	END IF
 	IF Sound$ = "t" THEN

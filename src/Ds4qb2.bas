@@ -55,6 +55,8 @@ End Sub
 Sub LoadMusic (ByVal MusicName AS STRING, ByVal MusicType AS INTEGER, ByVal MusicChannel AS INTEGER, ByVal Repeat AS INTEGER, ByVal Enable3D AS INTEGER)
 	Dim As Integer nloops
 	
+	RemoveMusic(MusicChannel)
+	
 	fbs_Load_MP3File(MusicName, @SoundChannels(MusicChannel))
 	
 	If Repeat = 1 Then
@@ -64,11 +66,11 @@ Sub LoadMusic (ByVal MusicName AS STRING, ByVal MusicType AS INTEGER, ByVal Musi
 	EndIf
 	
 	fbs_Play_Wave(SoundChannels(MusicChannel), nloops, , , , @SoundChannelSounds(MusicChannel))
-End SUB
+End Sub
 
 Sub LoadSample
 	
-End SUB
+End Sub
 
 Function LongBreak (LongVar AS LONG, IntNum AS INTEGER) As Integer
 	Return 1
@@ -78,8 +80,10 @@ Function LongMake (IntVar1 AS INTEGER, IntVar2 AS INTEGER) As Long
 	Return 1
 End Function
 
-SUB PlaySample (SFXT As Integer)
-	
+SUB PlaySample (ByVal SampleName As String)
+	Dim As Integer hWave
+	fbs_Load_WAVFile(SampleName, @hWave)
+	fbs_Play_Wave(hWave)
 End Sub
 
 Sub RemoveMusic (ByVal MusicChannel AS Integer)
@@ -111,12 +115,12 @@ SUB ShutdownDS4QB
 	fbs_Exit()
 End Sub
 
-Sub PauseMusic (MusicChannel AS INTEGER)
-	
+Sub PauseMusic (ByVal MusicChannel As Integer)
+	fbs_Set_SoundPaused(SoundChannelSounds(MusicChannel), 1)
 End Sub
 
-Sub ResumeMusic (MusicChannel AS INTEGER)
-	
+Sub ResumeMusic (ByVal MusicChannel As Integer)
+	fbs_Set_SoundPaused(SoundChannelSounds(MusicChannel), 0)
 End Sub
 
 Sub WaitforDMA0
