@@ -1,3 +1,6 @@
+# Don't add the ds4qb2 communication file
+DS4QB2.DAT
+
 # Don't add new executables
 *.exe
 
