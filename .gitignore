@@ -3,6 +3,7 @@ DS4QB2.DAT
 
 # Don't add new executables
 *.exe
+MUD2
 
 # Do not include FbEdit backup directory
 Bak/*
