@@ -3,7 +3,8 @@ DS4QB2.DAT
 
 # Don't add new executables
 *.exe
-MUD2
+seven-helms
+*.o
 
 # don't add save games
 MUD.sav
