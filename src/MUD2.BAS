@@ -466,14 +466,14 @@ IF A67PillarUse% = 1 GOTO 230
 IF JustLoaded% = 1 THEN
 	IF SavePos% = 0 THEN
 		CLS
-		LoadMusic "encampment.mp3", 2, 1, 1, 1
+		LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		GOTO 230
 	END IF
 	IF SavePos% = 1 THEN
 		CLS
-		LoadMusic "harem.mp3", 2, 1, 1, 1
+		LoadMusic "assets/assets/harem.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		Act1Pt2
@@ -481,7 +481,7 @@ IF JustLoaded% = 1 THEN
 
 	IF SavePos% = 3 THEN
 		CLS
-		LoadMusic "encampment.mp3", 2, 1, 1, 1
+		LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		HPS% = HP%
@@ -492,7 +492,7 @@ GameIntro
 'This is the beginning spot, once a player leaves the area this area will
 'never be able to be accessed again.
 209 CLS
-LoadMusic "encampment.mp3", 2, 1, 1, 1
+LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
 SLEEP 1
 PRINT  _
 "You sit in front of the campfire.  The dark city is quiet for now, you begin to look at your surroundings.  An old shop is off to the northeast.  There is a set of pillars surrounding a chaos star carved into the ground nearby.  The fiery pit lies to the northwest.  Sir Jacob is standing beside the abandoned shop." _
@@ -719,7 +719,7 @@ INPUT ">", AEncampment$
 	IF AEncampment$ = "NorthEast" GOTO 220
 
 	IF AEncampment$ = "northwest" THEN RemoveMusic 1
-	IF AEncampment$ = "northwest" THEN LoadMusic "underground.mp3", 2, 1, 1, 1
+	IF AEncampment$ = "northwest" THEN LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
 	IF AEncampment$ = "northwest" GOTO 240
 
 	IF AEncampment$ = "talk to sir jacob" THEN
@@ -794,7 +794,7 @@ INPUT ">", AEncampment$
 		IF A67PillarOn% = 1 THEN
 			COLOR 5
 			AEncampmentUsePillar% = 1
-			LoadMusic "necro.mp3", 2, 1, 1, 1
+			LoadMusic "assets/assets/necro.mp3", 2, 1, 1, 1
 			PRINT "You walk onto the burning chaos star, immediately you feel yourself being pulled to some far place."
 			SLEEP 5
 			COLOR 15
@@ -822,7 +822,7 @@ IF A1EnterPit% = 0 THEN
 	CLS
 	BATTLE
 	RemoveMusic 1
-	LoadMusic "underground.mp3", 2, 1, 1, 1
+	LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
 	GOTO 241
 	END IF
 241 CLS
@@ -839,7 +839,7 @@ PRINT "the dark labrynth."
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
 		GOTO 241
 	END IF
 COLOR 5
@@ -849,7 +849,7 @@ PRINT "         southeast: into the labrynth"
 COLOR 15
 245 INPUT ">", A1$
 IF A1$ = "up" THEN RemoveMusic 1
-IF A1$ = "up" THEN LoadMusic "encampment.mp3", 2, 1, 1, 1
+IF A1$ = "up" THEN LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
 IF A1$ = "up" THEN GOTO 230
 
 IF A1$ = "southeast" THEN GOTO 250
@@ -917,7 +917,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
 		GOTO 250
 	END IF
 COLOR 5
@@ -983,7 +983,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 260
 	END IF
 COLOR 5
@@ -1051,7 +1051,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 270
 	END IF
 COLOR 5
@@ -1127,7 +1127,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 270
 	END IF
 COLOR 5
@@ -1210,7 +1210,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 290
 	END IF
 COLOR 5
@@ -1244,7 +1244,7 @@ COLOR 15
 			SLEEP 4
 			BATTLE
 			RemoveMusic 1
-			LoadMusic "underground.mp3", 2, 1, 1, 1
+			LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 			GOTO 290
 			END IF
 		END IF
@@ -1316,7 +1316,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 300
 	END IF
 PRINT ""
@@ -1383,7 +1383,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 310
 	END IF
 COLOR 5
@@ -1462,7 +1462,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 320
 	END IF
 COLOR 5
@@ -1536,7 +1536,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 330
 	END IF
 COLOR 5
@@ -1615,7 +1615,7 @@ RANDOMIZE TIMER
 		BATTLE
 		RemoveMusic 1
 		
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 340
 	END IF
 COLOR 5
@@ -1740,7 +1740,7 @@ COLOR 15
 355 INPUT ">", A12$
 	IF A12$ = "west" GOTO 340
 	IF A12$ = "down" THEN
-		LoadMusic "harem.mp3", 2, 1, 1, 1
+		LoadMusic "assets/harem.mp3", 2, 1, 1, 1
 		LadderDown% = 1
 		Act1Pt2
 	END IF
@@ -1840,7 +1840,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 360
 	END IF
 COLOR 5
@@ -1923,7 +1923,7 @@ RANDOMIZE TIMER
 		BATTLE
 		RemoveMusic 1
 		
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 370
 	END IF
 COLOR 5
@@ -2005,7 +2005,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 380
 	END IF
 COLOR 5
@@ -2076,7 +2076,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 390
 	END IF
 COLOR 5
@@ -2149,7 +2149,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 500
 	END IF
 COLOR 5
@@ -2236,7 +2236,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 510
 	END IF
 COLOR 5
@@ -2331,7 +2331,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 520
 	END IF
 COLOR 5
@@ -2452,7 +2452,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 530
 	END IF
 COLOR 5
@@ -2553,7 +2553,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 540
 	END IF
 COLOR 5
@@ -2631,7 +2631,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 550
 	END IF
 COLOR 5
@@ -2709,7 +2709,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 560
 	END IF
 COLOR 5
@@ -2797,7 +2797,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 570
 	END IF
 COLOR 5
@@ -3464,7 +3464,7 @@ GOTO 645
 650 CLS
 BottomLift% = 0
 XanathusHP% = 150
-LoadMusic "harem.mp3", 2, 1, 1, 1
+LoadMusic "assets/harem.mp3", 2, 1, 1, 1
 PRINT "The lift has stopped at level 3.  This appears to be the lowest level"
 PRINT "the lift can go to.";
 IF A29StarSocket% = 1 THEN
@@ -3488,7 +3488,7 @@ COLOR 15
 			COLOR 15
 			GOTO 655
 		END IF
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 620
 	END IF
 
@@ -3572,7 +3572,7 @@ IF AEncampmentUsePillar% = 1 GOTO 990
 IF JustLoaded% = 1 THEN
 	IF SavePos% = 1 THEN
 		CLS
-		LoadMusic "harem.mp3", 2, 1, 1, 1
+		LoadMusic "assets/harem.mp3", 2, 1, 1, 1
 		XanathusHP% = 150
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
@@ -3581,7 +3581,7 @@ IF JustLoaded% = 1 THEN
 
 	IF SavePos% = 2 THEN
 		CLS
-		LoadMusic "necro.mp3", 2, 1, 1, 1
+		LoadMusic "assets/necro.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		GOTO 990
@@ -3606,7 +3606,7 @@ PRINT "         Up: Underground level 1"
 COLOR 15
 665 INPUT ">", A33$
 	IF A33$ = "up" THEN
-		LoadMusic "underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		LadderUp% = 1
 		ACT1
 	END IF
@@ -4684,7 +4684,7 @@ COLOR 15
 805 INPUT ">", A47$
 	IF A47$ = "north" GOTO 750
 	IF A47$ = "down" THEN
-		LoadMusic "necro.mp3", 2, 1, 1, 1
+		LoadMusic "assets/necro.mp3", 2, 1, 1, 1
 		GOTO 810
 	END IF
 
@@ -4763,7 +4763,7 @@ END IF
 COLOR 15
 813 INPUT ">", A48$
 	IF A48$ = "up" THEN
-		LoadMusic "harem.mp3", 2, 1, 1, 1
+		LoadMusic "assets/harem.mp3", 2, 1, 1, 1
 		GOTO 800
 	END IF
 
@@ -6398,7 +6398,7 @@ COLOR 15
 	   IF A67PillarOn% = 1 THEN
 		COLOR 5
 		A67PillarUse% = 1
-		LoadMusic "encampment.mp3", 2, 1, 1, 1
+		LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
 		PRINT "You feel a strange pulling sensation."
 		SLEEP 4
 		COLOR 15
@@ -6602,7 +6602,7 @@ CLS
 LHO$ = LH$
 	'START PLAYIN SOME TUNES!
 IF HelmsburgBttl% = 3 THEN
-	LoadMusic "battle.mp3", 2, 1, 1, 1
+	LoadMusic "assets/battle.mp3", 2, 1, 1, 1
 	SLEEP 1
 	END IF
 
@@ -6633,14 +6633,14 @@ IF HelmsburgBttl% = 1 THEN
 	M% = 100
 	PRINT "BATTLE: Type help for battle commands"
 	ENEMY$ = "Ork"
-	PlaySample "orcspeak.wav"
+	PlaySample "assets/orcspeak.wav"
 	END IF
 
 If HelmsburgBttl% = 2 THEN
 	M% = 100
 	PRINT "BATTLE: Type help for battle commands"
 	ENEMY$ = "Ork"
-	PlaySample "orcspeak.wav"
+	PlaySample "assets/orcspeak.wav"
 	END IF
 
 IF A3Corpse% = 1 THEN
@@ -6650,7 +6650,7 @@ IF A3Corpse% = 1 THEN
 	PRINT "The lunge damages you"
 	HPS% = HPS% - 2
 	ENEMY$ = "Corpse"
-	PlaySample "undeadspeak.wav"
+	PlaySample "assets/undeadspeak.wav"
 END IF
 
 0.2 RANDOMIZE TIMER                        'RANDOMIZING THE MONSTER HITPOINTS
@@ -6660,7 +6660,7 @@ ENEMYPTS% = P% + q% + ENEMYHPSBONUS        'RANDOMIZING THE MONSTER HITPOINTS (I
 
 IF WightLord% = 1 THEN
 	ENEMY$ = "Wight Lord"
-	PlaySample "undeadspeak.wav"
+	PlaySample "assets/undeadspeak.wav"
 	ENEMYPTS% = 2000
 	END IF
 PRINT "The "; ENEMY$; " spits at "; Name$; " and readies his weapon."
@@ -10905,7 +10905,7 @@ DO
 LOOP UNTIL INKEY$ = CHR$(32)    '32 is the ASCII code for Spacebar.
 SetVolume WillsSoundEffectVolume%, WillsSoundEffectVolume%, WillsMusicVolume%
 RemoveMusic 3
-LoadMusic "intro.mp3", 2, 1, 0, 1
+LoadMusic "assets/intro.mp3", 2, 1, 0, 1
 Cls
 PRINT "   You wake from your sleep this morning to the sounds of the town's"
 PRINT "soldiers training for battle, once again you are reminded of your desire"
@@ -10923,7 +10923,7 @@ PRINT "the townspeople!  You look around desperately and see your father's sword
 PRINT "mounted on the wall.  Quickly you grab the weapon and fly into battle."
 SLEEP 23
 RemoveMusic 1
-LoadMusic "main.mp3", 2, 2, 1, 1
+LoadMusic "assets/main.mp3", 2, 2, 1, 1
 HelmsburgBttl% = 1
 BATTLE
 HelmsburgBttl% = 2
@@ -12090,7 +12090,7 @@ PauseMusic 1
 PauseMusic 2
 PauseMusic 3
 PauseMusic 4
-LoadMusic "ocmain.mp3", 2, 5, 1, 1
+LoadMusic "assets/ocmain.mp3", 2, 5, 1, 1
 CFADE 3, 0, 100, 25
 Diff% = 1
 9998 CLS
@@ -12135,7 +12135,7 @@ END IF
 		RemoveMusic 3
 		RemoveMusic 4
 		RemoveMusic 5
-		LoadMusic "ocmain.mp3", 2, 5, 1, 1
+		LoadMusic "assets/ocmain.mp3", 2, 5, 1, 1
 		GOTO 9998
 	END IF
 
@@ -12870,9 +12870,9 @@ COLOR 15
 	RemoveMusic 4
 	RemoveMusic 5
 	SetVolume 0, 0, 0
-	LoadMusic "intro.mp3", 2, 1, 1, 1
+	LoadMusic "assets/intro.mp3", 2, 1, 1, 1
 	PauseMusic 1
-	LoadMusic "main.mp3", 2, 2, 1, 1
+	LoadMusic "assets/main.mp3", 2, 2, 1, 1
 	PauseMusic 2
 	SetVolume WillsSoundEffectVolume%, WillsSoundEffectVolume%, WillsMusicVolume%
 	ResumeMusic 1
@@ -13006,23 +13006,23 @@ INPUT ">", Sound$
 	IF Sound$ = "e" THEN
 		PRINT "Which one do you want to play? <1-3>"
 		INPUT ">", SFXTest$
-		IF SFXTest$ = "1" THEN PlaySample "orcspeak.wav"
-		IF SFXTest$ = "2" THEN PlaySample "undeadspeak.wav"
-		IF SFXTest$ = "3" THEN PlaySample "zombiespeak.wav"
+		IF SFXTest$ = "1" THEN PlaySample "assets/orcspeak.wav"
+		IF SFXTest$ = "2" THEN PlaySample "assets/undeadspeak.wav"
+		IF SFXTest$ = "3" THEN PlaySample "assets/zombiespeak.wav"
 
 		GOTO 1.3
 	END IF
 	IF Sound$ = "t" THEN
 		PRINT "Which one do you want to play? <1-8>"
 		INPUT ">", MUSTest$
-		IF MUSTest$ = "1" THEN LoadMusic "ocmain.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "2" THEN LoadMusic "intro.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "3" THEN LoadMusic "main.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "4" THEN LoadMusic "encampment.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "5" THEN LoadMusic "underground.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "6" THEN LoadMusic "battle.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "7" THEN LoadMusic "harem.mp3", 2, 1, 1, 1
-		IF MUSTest$ = "8" THEN LoadMusic "necro.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "1" THEN LoadMusic "assets/ocmain.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "2" THEN LoadMusic "assets/intro.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "3" THEN LoadMusic "assets/main.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "4" THEN LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "5" THEN LoadMusic "assets/underground.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "6" THEN LoadMusic "assets/battle.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "7" THEN LoadMusic "assets/harem.mp3", 2, 1, 1, 1
+		IF MUSTest$ = "8" THEN LoadMusic "assets/necro.mp3", 2, 1, 1, 1
 		GOTO 1.3
 	END IF
 	IF Sound$ = "l" THEN GOTO 1.05
