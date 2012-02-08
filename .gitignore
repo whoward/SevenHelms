@@ -5,8 +5,15 @@ DS4QB2.DAT
 *.exe
 MUD2
 
+# don't add save games
+MUD.sav
+sgame.sav
+
 # Do not include FbEdit backup directory
 Bak/*
 
 # Don't include the undo file for the project
 *.undo
+
+# nothing generated under the fbsound directory
+lib/fbsound0.10/*
