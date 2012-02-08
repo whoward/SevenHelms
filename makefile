@@ -10,11 +10,13 @@ PROGRAMSRC = src/MUD2.BAS
 OBJS = src/Ds4qb2.o
 LIBS = $(FBSNDLIB)/libfbscpulin.a $(FBSNDLIB)/libfbsoundlin.a libplug-alsa.so libplug-arts.so libplug-dsp.so
 
-all : $(PROGRAMSRC) $(OBJS) $(LIBS)
-	$(FBC) $(FBCFLAGS) -x $(PROGRAM) $(PROGRAMSRC) $(OBJS)
+all : $(PROGRAM)
 
 clean :
 	rm $(LIBS) $(OBJS) $(PROGRAM)
+
+$(PROGRAM) : $(PROGRAMSRC) $(OBJS) $(LIBS)
+	$(FBC) $(FBCFLAGS) -x $(PROGRAM) $(PROGRAMSRC) $(OBJS)
 
 src/Ds4qb2.o : src/Ds4qb2.bas
 	$(FBC) $(FBCFLAGS) -c -C src/Ds4qb2.bas
