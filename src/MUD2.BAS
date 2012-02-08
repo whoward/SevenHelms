@@ -466,14 +466,14 @@ IF A67PillarUse% = 1 GOTO 230
 IF JustLoaded% = 1 THEN
 	IF SavePos% = 0 THEN
 		CLS
-		LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
+		LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		GOTO 230
 	END IF
 	IF SavePos% = 1 THEN
 		CLS
-		LoadMusic "assets/assets/harem.mp3", 2, 1, 1, 1
+		LoadMusic "assets/harem.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		Act1Pt2
@@ -481,7 +481,7 @@ IF JustLoaded% = 1 THEN
 
 	IF SavePos% = 3 THEN
 		CLS
-		LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
+		LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
 		PRINT "You have re-entered the world of Fargaia, good luck on your quest."
 		SLEEP 4
 		HPS% = HP%
@@ -492,7 +492,7 @@ GameIntro
 'This is the beginning spot, once a player leaves the area this area will
 'never be able to be accessed again.
 209 CLS
-LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
+LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
 SLEEP 1
 PRINT  _
 "You sit in front of the campfire.  The dark city is quiet for now, you begin to look at your surroundings.  An old shop is off to the northeast.  There is a set of pillars surrounding a chaos star carved into the ground nearby.  The fiery pit lies to the northwest.  Sir Jacob is standing beside the abandoned shop." _
@@ -719,7 +719,7 @@ INPUT ">", AEncampment$
 	IF AEncampment$ = "NorthEast" GOTO 220
 
 	IF AEncampment$ = "northwest" THEN RemoveMusic 1
-	IF AEncampment$ = "northwest" THEN LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
+	IF AEncampment$ = "northwest" THEN LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 	IF AEncampment$ = "northwest" GOTO 240
 
 	IF AEncampment$ = "talk to sir jacob" THEN
@@ -794,7 +794,7 @@ INPUT ">", AEncampment$
 		IF A67PillarOn% = 1 THEN
 			COLOR 5
 			AEncampmentUsePillar% = 1
-			LoadMusic "assets/assets/necro.mp3", 2, 1, 1, 1
+			LoadMusic "assets/necro.mp3", 2, 1, 1, 1
 			PRINT "You walk onto the burning chaos star, immediately you feel yourself being pulled to some far place."
 			SLEEP 5
 			COLOR 15
@@ -822,7 +822,7 @@ IF A1EnterPit% = 0 THEN
 	CLS
 	BATTLE
 	RemoveMusic 1
-	LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
+	LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 	GOTO 241
 	END IF
 241 CLS
@@ -839,7 +839,7 @@ PRINT "the dark labrynth."
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 241
 	END IF
 COLOR 5
@@ -849,7 +849,7 @@ PRINT "         southeast: into the labrynth"
 COLOR 15
 245 INPUT ">", A1$
 IF A1$ = "up" THEN RemoveMusic 1
-IF A1$ = "up" THEN LoadMusic "assets/assets/encampment.mp3", 2, 1, 1, 1
+IF A1$ = "up" THEN LoadMusic "assets/encampment.mp3", 2, 1, 1, 1
 IF A1$ = "up" THEN GOTO 230
 
 IF A1$ = "southeast" THEN GOTO 250
@@ -917,7 +917,7 @@ RANDOMIZE TIMER
 		SLEEP 2
 		BATTLE
 		RemoveMusic 1
-		LoadMusic "assets/assets/underground.mp3", 2, 1, 1, 1
+		LoadMusic "assets/underground.mp3", 2, 1, 1, 1
 		GOTO 250
 	END IF
 COLOR 5
