@@ -21,15 +21,15 @@ I've updated this program to compile with FreeBasic (http://www.freebasic.net/) 
 
 2. Install required libraries for FBSound 
     
-     ```apt-get install libOGG-dev libvorbis-dev libasound2-dev```
+    ```apt-get install libOGG-dev libvorbis-dev libasound2-dev```
 
 3. Run "make" from the root directory 
 
-    ```make```
+    ``` make ```
 
 4. enjoy the game (be gentle with criticism)
 
-    ```./seven-helms```
+    ``` ./seven-helms ```
 
 ### Windows Users
 
