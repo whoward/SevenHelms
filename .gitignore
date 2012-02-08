@@ -1,10 +1,8 @@
-# Don't add the ds4qb2 communication file
-DS4QB2.DAT
-
-# Don't add new executables
+# Don't add any binaries
 *.exe
 seven-helms
 *.o
+*.so
 
 # don't add save games
 MUD.sav
